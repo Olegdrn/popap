@@ -1,4 +1,5 @@
 import { useState } from 'react';
+import { BrowserRouter, Route, Routes, Link } from "react-router-dom";
 import './App.css';
 import { Form } from './components/form';
 import { Header } from './components/header';
@@ -20,17 +21,27 @@ function App() {
 
   return (
     <div onClick={() => setModalActive(false)} className="App container">
-      <Header active={modalActive} setActive={setModalActive}
-        setEmail={setEmail} setPassword={setPassword}
-        setEmailError={setEmailError} setPasswordError={setPasswordError}
-      />
-      <Form active={modalActive} setActive={setModalActive} setSuccessActive={setSuccessActive}
-        email={email} setEmail={setEmail} password={password} setPassword={setPassword}
-        emailError={emailError} setEmailError={setEmailError}
-        passwordError={passwordError} setPasswordError={setPasswordError}
-      />
-      <Success successActive={successActive} />
-      <Counters />
+      <BrowserRouter>
+        <Routes>
+          <Route path='/' element={<Header active={modalActive} setActive={setModalActive}
+            setEmail={setEmail} setPassword={setPassword}
+            setEmailError={setEmailError} setPasswordError={setPasswordError}
+          />} />
+        </Routes>
+        <Routes>
+          <Route path='/' element={<Form active={modalActive} setActive={setModalActive} setSuccessActive={setSuccessActive}
+            email={email} setEmail={setEmail} password={password} setPassword={setPassword}
+            emailError={emailError} setEmailError={setEmailError}
+            passwordError={passwordError} setPasswordError={setPasswordError}
+          />} />
+        </Routes>
+        <Routes>
+          <Route path='/' element={<Success successActive={successActive} />} />
+        </Routes>
+        <Routes>
+          <Route path='/counters' element={<Counters />} />
+        </Routes>
+      </BrowserRouter>
     </div>
   );
 }
