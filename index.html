@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;1,100;1,300;1,400&display=swap"
+        rel="stylesheet">
+    <title>ODR_Registration</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <div class="container">
+        <header class="header">
+            <h4>Personal account</h4>
+        </header>
+        <section class="buttonArea">
+            <div class="buttonContainer">
+                <button class="login">
+                    <img src="img/miniIcon.svg" alt="">
+                    <p class="loginP">Login</p>
+                </button>
+                <button class="like" value=0>
+                    <img src="img/like.svg" alt="">
+                    <p class="likeValue"></p>
+                </button>
+                <button class="like_dislike" value="0">
+                    <img src="img/dislike.svg" alt="">
+                    <p class="dislikeValue"></p>
+                </button>
+            </div>
+        </section>
+        <section class="registration">
+            <div class="registrationField">
+                <div class="registrationImgArea">
+                    <img class="registrationImg" src="img/Icon.svg" alt="none">
+                </div>
+                <form class="mainForm" action="#" id="validForm">
+                    <div class="crossImg"> <img src="img/cross.svg" alt="none">
+                    </div>
+                    <p class="inputP">E-mail</p>
+                    <input class="inputEmail" name="email" id="email">
+                    <p class="ErrorE">This field is required</p>
+                    <p class="ErrorES">Not valid E-mail address</p>
+                    <div class="passwordArea">
+                        <p class="inputE">Password</p>
+                        <input class="inputPassword" type="password" name="password" id="password">
+                        <p class="ErrorP">This field is required</p>
+                        <p class="ErrorEP">Wrong password</p>
+                        <p class="adviceP">Please use 3-8 any characters</p>
+                    </div>
+                    <button class="loginButton" type="submit" id="log-btn">Login</button>
+                    <div class="addOpt">
+                        <p class="addText">Forgot password?</p>
+                        <img class="oval" src="./img/Oval.svg" alt="">
+                        <p class="addText">User registration</p>
+                    </div>
+                </form>
+                <div>
+        </section>
+        <section class="success">
+            <div class="successArea">
+                <div class="imgSuccess">
+                    <img src="img/success.svg" alt="none">
+                </div>
+                <h2>SUCCESS</h2>
+            </div>
+        </section>
+
+        <footer class="footer">
+            <div class="container">
+                <div class="footer_content">
+                </div>
+            </div>
+        </footer>
+    </div>
+    <script src="main.js"></script>
+    <script src="validator.js"></script>
+</body>
+
+</html>
