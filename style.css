@@ -1,0 +1,342 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+.container {
+  width: 1140px;
+  margin: 0 auto;
+  background-color: #dadada;
+}
+
+body {
+  font-family: 'Arial', sans-serif;
+}
+
+.header {
+  margin-bottom: 20px;
+  margin-left: 2%;
+}
+
+h4 {
+  font-weight: bold;
+  font-size: 30px;
+  color: #858585;
+}
+
+.buttonArea {
+  margin-bottom: 10px;
+  margin-left: 2%;
+}
+
+.regText {
+  margin-bottom: 15px;
+}
+
+.buttonContainer {
+  width: 30%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.login {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  background-color: #006cff;
+  width: 35%;
+  height: 48px;
+  cursor: pointer;
+  border: 1px solid #006cff;
+  border-radius: 5px;
+}
+
+.loginP {
+  color: #FFFFFF;
+  font-size: 17px;
+}
+
+.like {
+  background-color: #65b878;
+  width: 25%;
+  height: 48px;
+  cursor: pointer;
+  border: 1px solid #65b878;
+  border-radius: 10px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.like_dislike {
+  width: 25%;
+  height: 48px;
+  cursor: pointer;
+  background-color: #dc3545;
+  border: 1px solid #dc3545;
+  border-radius: 10px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.likeValue,
+.dislikeValue {
+  color: #FFFFFF;
+  font-size: 17px;
+}
+
+.registration {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  padding: 150px 0 10px 0;
+}
+
+.registrationField {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  display: none;
+  height: 100%;
+  width: 750px;
+}
+
+.registrationImgArea {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  width: 50%;
+  background-color: #5988d9;
+}
+
+.registrationImg {
+  max-width: 248px;
+  max-height: 248px;
+}
+
+.mainForm {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -ms-flex-line-pack: center;
+      align-content: center;
+  width: 35%;
+  padding: 36px 50.4px;
+  background-color: #FFFFFF;
+}
+
+.crossImg {
+  width: 15px;
+  height: 15px;
+  -ms-flex-item-align: end;
+      align-self: flex-end;
+  margin-bottom: 11px;
+  cursor: pointer;
+}
+
+.inputEmail,
+.inputPassword {
+  padding: 0 3px;
+  margin-top: 13px;
+  margin-bottom: 3px;
+  height: 35px;
+  border-radius: 6px;
+  background-color: #f3f3f3;
+}
+
+.passwordArea {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  width: 100%;
+  margin-top: 13px;
+}
+
+.adviceP {
+  font-weight: 300;
+  font-size: 13px;
+  line-height: 16px;
+  color: #858585;
+  display: none;
+  margin-bottom: 10px;
+}
+
+.passwordArea:hover .adviceP {
+  display: block;
+}
+
+.loginButton {
+  height: 35px;
+  border-radius: 6px;
+  background-color: #5988d9;
+  margin-top: 6px;
+  margin-bottom: 13px;
+  cursor: pointer;
+}
+
+.loginButton:hover {
+  -webkit-box-shadow: 0 5px 8px rgba(12, 12, 12, 0.8);
+          box-shadow: 0 5px 8px rgba(12, 12, 12, 0.8);
+  background-color: #F16D7F;
+}
+
+p {
+  font-weight: bold;
+}
+
+.ErrorP,
+.ErrorE {
+  color: #dc3545;
+  font-size: 14px;
+  margin-bottom: 13px;
+  display: none;
+}
+
+.ErrorEP,
+.ErrorES {
+  color: #dc3545;
+  font-size: 14px;
+  display: none;
+}
+
+.inputP {
+  font-size: 20px;
+  font-weight: bold;
+}
+
+.addOpt {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  width: 100%;
+}
+
+.oval {
+  width: 3%;
+  height: 60%;
+}
+
+.addText {
+  font-size: 14px;
+  font-weight: 400;
+  cursor: pointer;
+  text-decoration: underline;
+}
+
+.success {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  display: none;
+}
+
+.successArea {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  width: 65%;
+  height: 364px;
+  background-color: #65b878;
+}
+
+.imgSuccess {
+  background-color: #FFFFFF;
+  margin-bottom: 20px;
+}
+
+h2 {
+  color: #FFFFFF;
+}
+
+.visible {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.invisible {
+  display: none;
+}
+
+.inputError {
+  background: url(./img/inputI.png) no-repeat right;
+  border: 1px solid #dc3545;
+  background-size: 20px;
+}
+
+@media (max-width: 476px) {
+  .registrationField {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+  .registrationImgArea {
+    width: 48%;
+  }
+  .successArea {
+    width: 32%;
+  }
+}
+/*# sourceMappingURL=style.css.map */

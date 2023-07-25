@@ -1,0 +1,310 @@
+$container_width: 1140px;
+
+$main_backg_color: #dadada;
+
+$green_color: #65b878;
+
+$blue_color: #006cff;
+
+$blue_backg: #5988d9;
+
+$red_color: #dc3545;
+
+$black_color: #000000;
+
+$white_color: #FFFFFF;
+
+$grey_color: #f3f3f3;
+
+$text_grey_color: #858585;
+
+$main_bright_color: #F16D7F;
+
+
+* {
+  margin: 0;
+  padding: 0;
+}
+
+.container {
+  width: $container_width;
+  margin: 0 auto;
+  background-color: $main_backg_color;
+}
+
+body {
+  font-family: 'Arial', sans-serif;
+}
+
+.header {
+  margin-bottom: $container_width*(20/1140);
+  margin-left: 2%;
+}
+
+h4 {
+  font-weight: bold;
+  font-size: $container_width*(30/1140);
+  color: $text_grey_color;
+}
+
+.buttonArea {
+  margin-bottom: 10px;
+  margin-left: 2%;
+
+}
+
+.regText {
+  margin-bottom: 15px;
+}
+
+.buttonContainer {
+  width: 30%;
+  display: flex;
+  justify-content: space-between;
+
+}
+
+.login {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  background-color: $blue_color;
+  width: 35%;
+  height: 48px;
+  cursor: pointer;
+  border: 1px solid $blue_color;
+  border-radius: 5px;
+}
+
+.loginP {
+  color: $white_color;
+  font-size: 17px;
+}
+
+.like {
+  background-color: $green_color;
+  width: 25%;
+  height: 48px;
+  cursor: pointer;
+  border: 1px solid $green_color;
+  border-radius: 10px;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+
+  &_dislike {
+    width: 25%;
+    height: 48px;
+    cursor: pointer;
+    background-color: $red_color;
+    border: 1px solid $red_color;
+    border-radius: 10px;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+  }
+}
+
+.likeValue,
+.dislikeValue {
+  color: $white_color;
+  font-size: 17px;
+}
+
+.registration {
+  display: flex;
+  justify-content: center;
+  padding: 150px 0 10px 0;
+}
+
+.registrationField {
+  display: flex;
+  justify-content: center;
+  display: none;
+  height: 100%;
+  width: $container_width*(750/1140);
+
+
+}
+
+.registrationImgArea {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 50%;
+  background-color: $blue_backg;
+}
+
+.registrationImg {
+  max-width: $container_width*(248/1140);
+  max-height: $container_width*(248/1140);
+}
+
+
+.mainForm {
+  display: flex;
+  flex-direction: column;
+  align-content: center;
+  width: 35%;
+  padding: $container_width*(15/475) $container_width*(21/475);
+  background-color: $white_color;
+
+
+}
+
+.crossImg {
+  width: 15px;
+  height: 15px;
+  align-self: flex-end;
+  margin-bottom: 11px;
+  cursor: pointer;
+}
+
+.inputEmail,
+.inputPassword {
+  padding: 0 3px;
+  margin-top: 13px;
+  margin-bottom: 3px;
+  height: 35px;
+  border-radius: 6px;
+  background-color: $grey_color;
+}
+
+.passwordArea {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  margin-top: 13px;
+}
+
+
+
+.adviceP {
+  font-weight: 300;
+  font-size: 13px;
+  line-height: 16px;
+  color: $text_grey_color;
+  display: none;
+  margin-bottom: 10px;
+}
+
+.passwordArea:hover .adviceP {
+  display: block;
+}
+
+
+.loginButton {
+  height: 35px;
+  border-radius: 6px;
+  background-color: $blue_backg;
+  margin-top: 6px;
+  margin-bottom: 13px;
+  cursor: pointer;
+}
+
+.loginButton:hover {
+  box-shadow: 0 5px 8px rgba(12, 12, 12, 0.8);
+  background-color: $main_bright_color;
+}
+
+p {
+  font-weight: bold;
+}
+
+.ErrorP,
+.ErrorE {
+  color: $red_color;
+  font-size: 14px;
+  margin-bottom: 13px;
+  display: none;
+}
+
+.ErrorEP,
+.ErrorES {
+  color: $red_color;
+  font-size: 14px;
+  display: none;
+}
+
+.inputP {
+  font-size: 20px;
+  font-weight: bold;
+}
+
+.addOpt {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  width: 100%;
+}
+
+.oval {
+  width: 3%;
+  height: 60%;
+}
+
+.addText {
+  font-size: 14px;
+  font-weight: 400;
+  cursor: pointer;
+  text-decoration: underline;
+}
+
+.success {
+  display: flex;
+  justify-content: center;
+  display: none;
+
+}
+
+.successArea {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 65%;
+  height: $container_width*(364/1140);
+  background-color: $green_color;
+
+}
+
+.imgSuccess {
+  background-color: $white_color;
+  margin-bottom: 20px;
+}
+
+h2 {
+  color: $white_color;
+}
+
+.visible {
+  display: flex;
+}
+
+.invisible {
+  display: none;
+}
+
+.inputError {
+  background: url(./img/inputI.png) no-repeat right;
+  border: 1px solid $red_color;
+  background-size: 20px;
+}
+
+@media (max-width:476px) {
+
+  $container_width: 475px;
+
+  .registrationField {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .registrationImgArea {
+    width: 48%;
+  }
+
+  .successArea {
+    width: 32%;
+  }
+}
