@@ -27,15 +27,11 @@ function App() {
             setEmail={setEmail} setPassword={setPassword}
             setEmailError={setEmailError} setPasswordError={setPasswordError}
           />} />
-        </Routes>
-        <Routes>
-          <Route path='/' element={<Form active={modalActive} setActive={setModalActive} setSuccessActive={setSuccessActive}
+          <Route path='/form' element={<Form active={modalActive} setActive={setModalActive} setSuccessActive={setSuccessActive}
             email={email} setEmail={setEmail} password={password} setPassword={setPassword}
             emailError={emailError} setEmailError={setEmailError}
             passwordError={passwordError} setPasswordError={setPasswordError}
           />} />
-        </Routes>
-        <Routes>
           <Route path='/' element={<Success successActive={successActive} />} />
         </Routes>
         <Routes>
