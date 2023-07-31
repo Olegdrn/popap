@@ -1,7 +1,12 @@
-import successI from '../img/success.png'
+import successI from '../img/success.png';
+import { useContext } from "react";
+import { MyContext } from "../App";
 
 //successActive с setTimeout изменяется в form.jsx при событии submit 
-export function Success({ successActive }) {
+export function Success() {
+
+  const { successActive } = useContext(MyContext);
+
 
   return <>
     <section className={successActive ? "success visible" : "success"}>
