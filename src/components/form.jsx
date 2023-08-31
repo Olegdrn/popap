@@ -1,22 +1,24 @@
-import { useState } from "react";
+import { useContext, useState } from "react";
 import { useEffect } from "react";
 import miniI from '../img/miniIcon.png';
 import crossI from '../img/cross.png';
-import pointI from "../img/point.png"
+import pointI from "../img/point.png";
+import { MyContext } from "../App";
 
 
-export function Form({ active, setActive, setSuccessActive,
-  email, setEmail, password, setPassword,
-  emailError, setEmailError,
-  passwordError, setPasswordError }) {
+
+export function Form() {
   const [formValid, setFormValid] = useState(false);
   const [basicErrorE, setBasicErrorE] = useState(false);
   const [basicErrorP, setBasicErrorP] = useState(false);
 
+  const { email, setEmail, password, setPassword, emailError, setEmailError, passwordError,
+    setPasswordError, modalActive, setModalActive, setSuccessActive } = useContext(MyContext);
+
   // Функция, которая будет вызываться по клику на кнопки открывания и закрывания 
   // Модального окна и менять его статус на противоположный 
   const toggleModal = () => {
-    setActive(!active)
+    setModalActive(!modalActive)
   }
 
   //Обработчик ошибок: Если ввод валиден, то ошибок нет 
@@ -73,7 +75,7 @@ export function Form({ active, setActive, setSuccessActive,
     toggleModal();
     setEmail('');
     setPassword('');
-    setActive(false);
+    setModalActive(false);
     setSuccessActive(true);
     setFormValid(false)
     setTimeout(() => {
@@ -81,8 +83,9 @@ export function Form({ active, setActive, setSuccessActive,
     }, 3000);
   }
   return <>
+
     <section className="registration" >
-      <div onClick={e => e.stopPropagation()} className={active ? "registrationField" : "registrationField invisible"}>
+      <div onClick={e => e.stopPropagation()} className={modalActive ? "registrationField" : "registrationField invisible"}>
         <div className="registrationImgArea">
           <img className="registrationImg" src={miniI} alt="none" />
         </div>

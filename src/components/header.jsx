@@ -1,22 +1,23 @@
-import { useState } from "react";
-import { useEffect } from "react";
+import { useContext, useState } from "react";
 import miniI from '../img/miniIcon.png';
 import likeI from '../img/like.png';
 import disLikeI from '../img/dislike.png';
+import { MyContext } from "../App";
 
 
-
-export const Header = ({ active, setActive,
-  setEmail, setPassword, setEmailError, setPasswordError }) => {
+export const Header = () => {
 
   const [number, setNumber] = useState(0);
   const [likes, setLikes] = useState(localStorage.getItem('likes'));
   const [disLikes, setDisLikes] = useState(localStorage.getItem('disLikes'));
+  const { setEmail, setPassword, setEmailError,
+    setPasswordError, modalActive, setModalActive } = useContext(MyContext);
+
 
   // Функция обработчиков нажатия на кнопки, меняет видимость компонентов
   //Отправляет данные на сервер для подсчета попыток верификации
   const toggleModal = () => {
-    setActive(!active)
+    setModalActive(!modalActive)
     let login = { number };
     setNumber(number + 1);
     setEmail('');

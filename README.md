@@ -1,4 +1,4 @@
 Для запуска проекта необходимо в папке проекта ввести след. команды в терминал: 
-npm i
-npm i -g concurrently
-npm run dev
+1) npm i
+2) npm i -g concurrently
+3) npm run dev
